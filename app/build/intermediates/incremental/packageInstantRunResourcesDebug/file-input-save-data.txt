@@ -1,0 +1,30 @@
+#Internal package file, do not edit.
+#Wed Oct 11 22:24:35 PDT 2017
+2.base=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\resources-debug.ap_
+5.file=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\units.png
+5.set=ANDROID_RESOURCE
+3.base=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\resources-debug.ap_
+6.file=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
+2.set=ANDROID_RESOURCE
+4.base=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\resources-debug.ap_
+7.file=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\assets\\debug\\Music0.mp3
+7.set=ASSET
+count=9
+0.file=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-mdpi-v4\\buttons.bmp
+5.base=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\resources-debug.ap_
+8.file=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
+4.set=ANDROID_RESOURCE
+6.base=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\resources-debug.ap_
+1.file=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\game.xml
+1.set=ANDROID_RESOURCE
+7.base=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\assets\\debug
+2.file=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\ic_launcher.png
+6.set=ANDROID_RESOURCE
+0.base=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\resources-debug.ap_
+8.base=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\resources-debug.ap_
+3.file=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-ldpi-v4\\icon.png
+3.set=ANDROID_RESOURCE
+1.base=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\resources-debug.ap_
+4.file=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-ldpi-v4\\home_page.png
+8.set=ANDROID_RESOURCE
+0.set=ANDROID_RESOURCE

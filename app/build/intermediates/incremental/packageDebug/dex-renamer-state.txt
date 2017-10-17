@@ -1,0 +1,7 @@
+#Wed Oct 11 22:24:39 PDT 2017
+base.0=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_b75148978e1d48fc1b3bb13bf27189ac2937eb52
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a1e1f950d4776882343720b3b9a9dedea07a1803\\classes.dex
+base.1=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a1e1f950d4776882343720b3b9a9dedea07a1803
+file.0=C\:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_b75148978e1d48fc1b3bb13bf27189ac2937eb52\\classes.dex
