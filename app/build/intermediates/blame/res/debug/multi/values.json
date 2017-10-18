@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 91
                 },
                 "from": {
-                    "file": "C:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "/Users/alexbeerman/Documents/RPG2D/app/src/main/res/values/strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 98,
+                        "startOffset": 94,
                         "endColumn": 40,
-                        "endOffset": 134
+                        "endOffset": 130
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 129
                 },
                 "from": {
-                    "file": "C:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "/Users/alexbeerman/Documents/RPG2D/app/src/main/res/values/strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 59,
+                        "startOffset": 56,
                         "endColumn": 37,
-                        "endOffset": 92
+                        "endOffset": 89
                     }
                 }
             }

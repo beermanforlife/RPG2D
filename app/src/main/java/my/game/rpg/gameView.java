@@ -33,8 +33,8 @@ public class gameView extends View implements OnTouchListener{
 
     //the input variables
 	gameInput gi;
-	int input = 0;
-	int t_x, t_y; 
+
+	int t_x, t_y, input;
 	boolean touched = false;
 	int [] cordDown = new int[2];
 	int [] cordUp = new int[2];
@@ -99,7 +99,7 @@ public class gameView extends View implements OnTouchListener{
         bmp = Bitmap.createScaledBitmap(bmp, (int)(bmp.getWidth()/s_w), (int)(bmp.getHeight()/s_h), true);
         Log.d("Sprite: ", "Height: " + sH + " / " + bmp.getHeight());
 
-        gi = new gameInput(dim);
+        gi = new gameInput(s_width, s_height);
         
         //init the game State
 		gs.init(dim, bmp, sW, sH);
@@ -153,12 +153,15 @@ public class gameView extends View implements OnTouchListener{
     		gs.handleGameInput(input);
     		
 		 }else*/ if(event.getAction() == android.view.MotionEvent.ACTION_UP){
-			input = -1;
-			gs.handleGameInput(input);
+			input = gi.buttonPressed(t_x, t_y);
+			//input = -1;
+			if(input!=-1) {//if there is some input other then default
+				gs.handleGameInput(input);
+			}
     	}
     	if(event.getAction() == android.view.MotionEvent.ACTION_MOVE){
-			input = gi.handleInput(t_x, t_y);
-			gs.handleGameInput(input);
+			//input = gi.handleInput(t_x, t_y);
+			//gs.handleGameInput(input);
     	}
 
         return false;
@@ -186,8 +189,7 @@ public class gameView extends View implements OnTouchListener{
       
 
         gs.Draw(canvas);
-        gi.draw(canvas, paint);
-
+		gi.drawBattleButtons(canvas, paint);
     }
 
 }

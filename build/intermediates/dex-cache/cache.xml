@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Alex Desk\StudioProjects\RPG2D\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.1"
-        sha1="16f286bd469c2ec93e7f2ddc1ccc6df00533dfb8">
-        <dex dex="C:\Users\Alex Desk\StudioProjects\RPG2D\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_b75148978e1d48fc1b3bb13bf27189ac2937eb52\classes.dex" />
+        sha1="bd7258b23b1175a8fb4cc27d6130d9a7382e5149">
+        <dex dex="/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_45694e88c870bc0c6a35197cc3fbd0bd73244e1e/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Alex Desk\StudioProjects\RPG2D\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.1"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Users\Alex Desk\StudioProjects\RPG2D\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_a1e1f950d4776882343720b3b9a9dedea07a1803\classes.dex" />
+        <dex dex="/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_fc031aef6f973234d84c27ae00c2a94dae046c81/classes.dex" />
     </item>
 
 </items>

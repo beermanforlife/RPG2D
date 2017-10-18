@@ -1,14 +1,14 @@
 [
     {
-        "merged": "C:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\home_page.png",
-        "source": "C:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\src\\main\\res\\drawable-ldpi\\home_page.png"
+        "merged": "/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/res/merged/debug/drawable-ldpi/home_page.png",
+        "source": "/Users/alexbeerman/Documents/RPG2D/app/src/main/res/drawable-ldpi/home_page.png"
     },
     {
-        "merged": "C:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher.png",
-        "source": "C:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
+        "merged": "/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/res/merged/debug/drawable-ldpi/icon.png",
+        "source": "/Users/alexbeerman/Documents/RPG2D/app/src/main/res/drawable-ldpi/icon.png"
     },
     {
-        "merged": "C:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\icon.png",
-        "source": "C:\\Users\\Alex Desk\\StudioProjects\\RPG2D\\app\\src\\main\\res\\drawable-ldpi\\icon.png"
+        "merged": "/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/res/merged/debug/drawable-ldpi/ic_launcher.png",
+        "source": "/Users/alexbeerman/Documents/RPG2D/app/src/main/res/drawable-ldpi/ic_launcher.png"
     }
 ]

@@ -27,6 +27,7 @@ public class gameState {
 	SpriteSheet sprites;
 
 	Unit player;
+	Minion minion;
 	String s = new String();
 
 	public gameState() {
@@ -55,11 +56,16 @@ public class gameState {
 		sprites = new SpriteSheet(bmp);
 		player = new Unit();
 		player.setSpriteSize(sprites.getSpriteSheet().getHeight()/4, sprites.getSpriteSheet().getWidth()/12);
-		player.setWhichSprite(1,2);
-		player.setLoc(s_width/2, s_height/4);
+		player.setWhichSprite(1,0);
+		player.setLoc((s_width/2)-((sprites.getSpriteSheet().getWidth()/12)/2) , (s_height/2)-(sprites.getSpriteSheet().getHeight()/4));
 		int[] temp = new int[]{10,1,1};
 		player.setStats(temp);
 
+		minion = new Minion();
+		minion.setSpriteSize(sprites.getSpriteSheet().getHeight()/4, sprites.getSpriteSheet().getWidth()/12);
+		minion.setWhichSprite(2, 2);
+		minion.setLoc((s_width/2)-((sprites.getSpriteSheet().getWidth()/12)/2), (sprites.getSpriteSheet().getHeight()/4) );
+		minion.setStats(temp);
 
         //entity2.setLoc(s_width/2, s_height/3);
 		        //init the timer setup
@@ -68,12 +74,13 @@ public class gameState {
 	public void update(long passed) {
 
 		player.update(passed);
+		minion.update(passed);
     }
 	public void handleGameInput(int input){
 		
 			//entity.changeFacing(input);
 		player.handleInput(input);
-		
+		player.setWhichSprite(1, input);
 		
 		
 	}
@@ -84,8 +91,12 @@ public class gameState {
         Paint paint = new Paint();
 		canvas.drawRect(0, 0, s_width, s_height, paint);
 		sprites.Draw(canvas, player.getSpriteInfo());
+		sprites.Draw(canvas, minion.getSpriteInfo());
 		paint.setARGB(255, 0, 255, 0);
 		paint.setTextSize(50);
 		canvas.drawText(player.getPrintableHp(), player.getLocaiton().x, player.getLocaiton().y-paint.getTextSize(), paint);
-    }
+		paint.setColor(Color.RED);
+		canvas.drawText(minion.getPrintableHp(), minion.getLocaiton().x, minion.getLocaiton().y-paint.getTextSize(), paint);
+
+	}
 }
