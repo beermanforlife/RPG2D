@@ -2,5 +2,9 @@
     {
         "merged": "/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/res/merged/debug/layout/game.xml",
         "source": "/Users/alexbeerman/Documents/RPG2D/app/src/main/res/layout/game.xml"
+    },
+    {
+        "merged": "/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/res/merged/debug/layout/testmenu.xml",
+        "source": "/Users/alexbeerman/Documents/RPG2D/app/src/main/res/layout/testmenu.xml"
     }
 ]

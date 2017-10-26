@@ -16,11 +16,15 @@ public class MainGame extends Activity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        
+
+
+
+
         setContentView(R.layout.game);
-        
+
         game = (gameView)findViewById(R.id.game_view);
         game.setMode(gameView.RUNNING);
+
               
     }
     public void onStop(){

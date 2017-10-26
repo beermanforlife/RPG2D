@@ -17,9 +17,11 @@ public class gameState {
 	int [] cordDown = new int[2];
 	int [] cordUp = new int[2];
 	int inputVar = 0;
+	int turn = 0;
 	//timer stuff
 	long now, then , passed;
 	//placing
+	//gameInput gi;
 
 	int t_x, t_y; 
 
@@ -27,62 +29,96 @@ public class gameState {
 	SpriteSheet sprites;
 
 	Unit player;
-	Minion minion;
+	Minion [] minion;
+	int target = 0;
 	String s = new String();
 
 	public gameState() {
-
-		
-		
-       
 	}
 			
-	public void init(Rect dimentions, Bitmap bmp, int sp_w, int sp_h){
+	public void init(Rect dimentions, Bitmap bmp, int sp_w, int sp_h, int fildType) {
 		//dim saves the dimensions of the screen to scale things
 		Rect dim = new Rect();
 
 		dim.set(dimentions);
-		        
-		        //init values
+
+		//init values
 		t_x = t_y = xOff = yOff = 0;
-		        
-		        //setting device height and width
+
+		//setting device height and width
 		s_width = dim.width();
 		s_height = dim.height();
-		yOff = s_height/10;
-		xOff = s_width/5;
+		//gi = new gameInput(s_width, s_height);
+		yOff = s_height / 10;
+		xOff = s_width / 5;
 
-		        
+
 		sprites = new SpriteSheet(bmp);
 		player = new Unit();
-		player.setSpriteSize(sprites.getSpriteSheet().getHeight()/4, sprites.getSpriteSheet().getWidth()/12);
-		player.setWhichSprite(1,0);
-		player.setLoc((s_width/2)-((sprites.getSpriteSheet().getWidth()/12)/2) , (s_height/2)-(sprites.getSpriteSheet().getHeight()/4));
-		int[] temp = new int[]{10,1,1};
+		player.setSpriteSize(sprites.getSpriteSheet().getHeight() / 4, sprites.getSpriteSheet().getWidth() / 12);
+		player.setWhichSprite(0, 0);
+		player.setLoc((s_width / 2) - ((sprites.getSpriteSheet().getWidth() / 12) / 2), (s_height / 2) - (sprites.getSpriteSheet().getHeight() / 4));
+		int[] temp = new int[]{10, 2, 1};
 		player.setStats(temp);
 
-		minion = new Minion();
-		minion.setSpriteSize(sprites.getSpriteSheet().getHeight()/4, sprites.getSpriteSheet().getWidth()/12);
-		minion.setWhichSprite(2, 2);
-		minion.setLoc((s_width/2)-((sprites.getSpriteSheet().getWidth()/12)/2), (sprites.getSpriteSheet().getHeight()/4) );
-		minion.setStats(temp);
 
-        //entity2.setLoc(s_width/2, s_height/3);
-		        //init the timer setup
 	}
+	public void setMinions(int n_minions, int typeMinions){
+		minion = new Minion[n_minions];
+		int[] temp = new int[]{10, 2, 1};
+		for (int i = 0; i < minion.length; i++) {
+			minion[i] = new Minion();
+			minion[i].setSpriteSize(sprites.getSpriteSheet().getHeight() / 4, sprites.getSpriteSheet().getWidth() / 12);
+			minion[i].setWhichSprite(i+1, 2);
+			minion[i].setStats(temp);
 
+			switch (minion.length) {
+				case 1:
+					minion[i].setLoc((s_width / 2) - ((sprites.getSpriteSheet().getWidth() / 12) / 2),
+							(sprites.getSpriteSheet().getHeight() / 4));
+					break;
+				case 2:
+					minion[i].setLoc(((i + 1) * (s_width / 3)) - ((sprites.getSpriteSheet().getWidth() / 12) / 2),
+							(sprites.getSpriteSheet().getHeight() / 4));
+					break;
+				case 3:
+					minion[i].setLoc(((i + 1) * (s_width / 4)) - ((sprites.getSpriteSheet().getWidth() / 12) / 2),
+							(sprites.getSpriteSheet().getHeight() / 4));
+					break;
+			}
+
+		}
+	}
 	public void update(long passed) {
-
+		if(turn != 0){
+			minion[turn-1].attackPhysical(player);
+			turn++;
+			if(turn>minion.length){
+				turn=0;
+			}
+		}
 		player.update(passed);
-		minion.update(passed);
+		for(int i =0; i< minion.length; i++){
+			minion[i].update(passed);
+		}
+
     }
-	public void handleGameInput(int input){
-		
-			//entity.changeFacing(input);
-		player.handleInput(input);
-		player.setWhichSprite(1, input);
-		
-		
+	public void handleGameInput(int x_location, int y_location){
+		int input = -1;
+		//input = gi.buttonPressed(x_location, y_location);
+		if(input ==-1) {
+			//input = gi.minionSelected(minion, x_location, y_location);
+		}
+
+		switch(input){
+			case 0: player.attackPhysical(minion[target]);turn++;break;
+			case 1: player.buffStr(1);turn++;break;
+			case 2: player.setBuff_d(1);turn++;break;
+			case 10: target = 0;break;
+			case 11: target = 1;break;
+			case 12: target = 2;break;
+		}
+		input = -1;
 	}
 
    
@@ -91,12 +127,20 @@ public class gameState {
         Paint paint = new Paint();
 		canvas.drawRect(0, 0, s_width, s_height, paint);
 		sprites.Draw(canvas, player.getSpriteInfo());
-		sprites.Draw(canvas, minion.getSpriteInfo());
+
 		paint.setARGB(255, 0, 255, 0);
 		paint.setTextSize(50);
 		canvas.drawText(player.getPrintableHp(), player.getLocaiton().x, player.getLocaiton().y-paint.getTextSize(), paint);
+		paint.setColor(Color.YELLOW);
+		canvas.drawCircle(minion[target].getLocaiton().x + (minion[target].getSpriteInfo().drawLocation.width()/2),
+						minion[target].getLocaiton().y + (float)(minion[target].getSpriteInfo().drawLocation.height()*.75),
+						(float)(minion[target].getSpriteInfo().drawLocation.width() * .5), paint);
 		paint.setColor(Color.RED);
-		canvas.drawText(minion.getPrintableHp(), minion.getLocaiton().x, minion.getLocaiton().y-paint.getTextSize(), paint);
+		for(int i =0; i < minion.length; i++){
+			sprites.Draw(canvas, minion[i].getSpriteInfo());
+			canvas.drawText(minion[i].getPrintableHp(), minion[i].getLocaiton().x, minion[i].getLocaiton().y-paint.getTextSize(), paint);
 
+		}
+		//gi.drawBattleButtons(canvas, paint);
 	}
 }

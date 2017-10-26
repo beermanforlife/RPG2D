@@ -4,6 +4,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.widget.Button;
 
 public class gameInput {
 	Rect button_area;
@@ -12,6 +13,7 @@ public class gameInput {
 
 	public gameInput(int s_w, int s_h){
 		button_area = new Rect(0, s_h/2, s_w, s_h);
+
 		for(int i = 0; i < 3; i++){
 			battleButtons[i] = new Rect(0,
 					s_h/2 + ((2*i)*(button_area.height()/6)),//taking screen height in half, then
@@ -33,6 +35,16 @@ public class gameInput {
 		}
 		return isPressed;
 	}
+	public int minionSelected(Minion[] m, int a_x, int a_y){
+		int select = -1;
+		for(int i = 0; i < m.length && select ==-1; i ++){
+			if(m[i].contains(a_x, a_y)){
+				select =  i + 10;// doing + 10 to identify input as a selection over a button press. Might want to change in future
+			}
+		}
+
+		return select;
+	}
 	public void drawBattleButtons(Canvas ca, Paint pa){
 		pa.setColor(Color.RED);
 		ca.drawRect(button_area, pa);
@@ -41,5 +53,6 @@ public class gameInput {
 			ca.drawRect(battleButtons[i], pa);
 		}
 	}
+
 
 }

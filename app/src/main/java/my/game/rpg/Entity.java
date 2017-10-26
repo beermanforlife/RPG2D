@@ -32,4 +32,12 @@ public class Entity {
 	public void setWhichSprite(int wsX, int wsY){
 		sprite.setWhichSprite(wsX, wsY);
 	}
+	public boolean contains(int a_x, int a_y){
+		boolean contain = false;
+		if(a_x >= loc.x && a_y >= loc.y && a_x<= loc.x + sprite.drawLocation.width() && a_y <= loc.y + sprite.drawLocation.height()){
+			contain = true;
+		}
+
+		return contain;
+	}
 }
