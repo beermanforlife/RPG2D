@@ -1,7 +1,7 @@
-#Wed Oct 25 15:00:35 PDT 2017
-base.0=/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_45694e88c870bc0c6a35197cc3fbd0bd73244e1e
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_fc031aef6f973234d84c27ae00c2a94dae046c81/classes.dex
-base.1=/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_fc031aef6f973234d84c27ae00c2a94dae046c81
-file.0=/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_45694e88c870bc0c6a35197cc3fbd0bd73244e1e/classes.dex
+#Mon Jul 23 21:25:27 PDT 2018
+base.0=/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_fc031aef6f973234d84c27ae00c2a94dae046c81
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_45694e88c870bc0c6a35197cc3fbd0bd73244e1e/classes.dex
+base.1=/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_45694e88c870bc0c6a35197cc3fbd0bd73244e1e
+file.0=/Users/alexbeerman/Documents/RPG2D/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_fc031aef6f973234d84c27ae00c2a94dae046c81/classes.dex

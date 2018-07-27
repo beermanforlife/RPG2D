@@ -21,7 +21,7 @@ public class gameState {
 	//timer stuff
 	long now, then , passed;
 	//placing
-	//gameInput gi;
+	gameInput gi;
 
 	int t_x, t_y; 
 
@@ -48,7 +48,7 @@ public class gameState {
 		//setting device height and width
 		s_width = dim.width();
 		s_height = dim.height();
-		//gi = new gameInput(s_width, s_height);
+		gi = new gameInput(s_width, s_height);
 		yOff = s_height / 10;
 		xOff = s_width / 5;
 
@@ -105,9 +105,14 @@ public class gameState {
     }
 	public void handleGameInput(int x_location, int y_location){
 		int input = -1;
-		//input = gi.buttonPressed(x_location, y_location);
+		input = gi.buttonPressed(x_location, y_location);
 		if(input ==-1) {
-			//input = gi.minionSelected(minion, x_location, y_location);
+
+			for(int i = 0; i < minion.length && input ==-1; i ++) {
+				if (minion[i].contains(x_location, y_location)) {
+					input = i + 10;// doing + 10 to identify input as a selection over a button press. Might want to change in future
+				}
+			}
 		}
 
 		switch(input){
@@ -141,6 +146,6 @@ public class gameState {
 			canvas.drawText(minion[i].getPrintableHp(), minion[i].getLocaiton().x, minion[i].getLocaiton().y-paint.getTextSize(), paint);
 
 		}
-		//gi.drawBattleButtons(canvas, paint);
+		gi.drawBattleButtons(canvas, paint);
 	}
 }

@@ -9,16 +9,18 @@ import android.widget.Button;
 public class gameInput {
 	Rect button_area;
 	Rect [] battleButtons = new Rect[3];
-
+	int buttonPadding = 2;
 
 	public gameInput(int s_w, int s_h){
-		button_area = new Rect(0, s_h/2, s_w, s_h);
+		button_area = new Rect(0, 4*(s_h/5), s_w, s_h);
 
+
+		//Gives 3 buttons at bottom of screen equil spacing
 		for(int i = 0; i < 3; i++){
-			battleButtons[i] = new Rect(0,
-					s_h/2 + ((2*i)*(button_area.height()/6)),//taking screen height in half, then
-					s_w,//taking a 6th of the area and setting the top one full button appart from each other
-					(s_h/2 + ((2*i)*(button_area.height()/6))) + (button_area.height()/6));
+			battleButtons[i] = new Rect((i*(s_w/3))+buttonPadding,//left of the buttons based on 1/3 screen
+					button_area.top + buttonPadding,//top of the buttons
+					(i*(s_w/3)+(s_w/3))-buttonPadding,//right of the buttons
+					(s_h-buttonPadding));//bottom of button
 
 		}
 	}
@@ -35,16 +37,7 @@ public class gameInput {
 		}
 		return isPressed;
 	}
-	public int minionSelected(Minion[] m, int a_x, int a_y){
-		int select = -1;
-		for(int i = 0; i < m.length && select ==-1; i ++){
-			if(m[i].contains(a_x, a_y)){
-				select =  i + 10;// doing + 10 to identify input as a selection over a button press. Might want to change in future
-			}
-		}
 
-		return select;
-	}
 	public void drawBattleButtons(Canvas ca, Paint pa){
 		pa.setColor(Color.RED);
 		ca.drawRect(button_area, pa);
