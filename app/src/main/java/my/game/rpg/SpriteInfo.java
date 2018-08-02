@@ -68,6 +68,14 @@ public class SpriteInfo {
 		drawLocation.offsetTo(loc.x, loc.y);
 		//drawLocation.set(loc.x, loc.x +spriteWidth, loc.y, loc.y + spriteHeight);
 
-	}		
-		
+	}
+	public int getSpriteWidth(){return spriteWidth;}
+	public int getSpriteHeight(){return spriteHeight;}
+	public Location getPlayerSpace(){
+		Location space;
+		space = new Location();
+		space.x = spriteWidth/2;
+		space.y = spriteHeight/4;
+		return space;
+	}
 }

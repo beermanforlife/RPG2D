@@ -44,7 +44,7 @@ public class gameView extends View implements OnTouchListener{
 	
 	musicManager music;
 	int currentLevel = 0;
-	Bitmap bmp;
+	Bitmap []bmp;
 	//States
 	gameState gs = new gameState();
 
@@ -80,8 +80,10 @@ public class gameView extends View implements OnTouchListener{
        //music.init(m_context);
         //This scales the loaded bmp based on the correct window size.
         float s_h, s_w;
-        bmp = BitmapFactory.decodeResource(context.getResources(), R.drawable.units);
-        
+        bmp = new Bitmap[2];
+
+        bmp[0] = BitmapFactory.decodeResource(context.getResources(), R.drawable.units);
+        bmp[1] = BitmapFactory.decodeResource(context.getResources(), R.drawable.t1);
         
         
         sH = s_height/10;
@@ -89,17 +91,22 @@ public class gameView extends View implements OnTouchListener{
         
         s_h = s_w = 0;
         
-        s_h = (bmp.getHeight()/4);
+        s_h = (bmp[0].getHeight()/4);
         s_h = s_h/sH;
                 
-        s_w = (bmp.getWidth()/12);
+        s_w = (bmp[0].getWidth()/12);
         s_w = s_w/sW;
         
         Log.d("Scales", "S_H: " + s_h);
-        bmp = Bitmap.createScaledBitmap(bmp, (int)(bmp.getWidth()/s_w), (int)(bmp.getHeight()/s_h), true);
-        Log.d("Sprite: ", "Height: " + sH + " / " + bmp.getHeight());
 
-        //gi = new gameInput(s_width, s_height);
+        bmp[0] = Bitmap.createScaledBitmap(bmp[0], (int)(bmp[0].getWidth()/s_w), (int)(bmp[0]
+				.getHeight()
+				/s_h), true);
+        Log.d("Sprite: ", "Height: " + sH + " / " + bmp[0].getHeight());
+		bmp[1] = Bitmap.createScaledBitmap(bmp[1], s_width*3, s_width*3, false);
+        Log.d("Sprite: ", "Height: " + bmp[1].getWidth() + " / " + bmp[1].getHeight());
+
+        
 
         //init the game State
 		gs.init(dim, bmp, sW, sH, 0);

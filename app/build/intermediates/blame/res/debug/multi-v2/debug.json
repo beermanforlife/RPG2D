@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\beerm\\Documents\\GitHub\\RPG2D\\app\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\beerm\\Documents\\GitHub\\RPG2D\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "4,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "98,59",
+                        "endColumns": "40,37",
+                        "endOffsets": "134,92"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,96",
+                        "endColumns": "40,37",
+                        "endOffsets": "91,129"
+                    }
+                }
+            ]
+        }
+    ]
+}
